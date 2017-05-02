@@ -10,10 +10,11 @@ var path = require('path');
 module.exports = function(grunt){
 
   grunt.task.registerMultiTask('atavi-client-bundle-application', 'task to create the application package file', function(){
+    let extension = this.data.javascript ? '.js' : '.json';
     let src = this.data.src;
     console.log(src);
       //console.log(src[i]);
-      let out = this.data.out + '/' + this.data.name + '.json'; //nome del file di output
+      let out = this.data.out + '/' + this.data.name + extension; //nome del file di output
 
       let cur = grunt.file.readJSON(src);
       let dir = path.dirname(src) + '/';  //path della cartella
@@ -51,6 +52,8 @@ module.exports = function(grunt){
       var str = JSON.stringify(pkg, null, 2);
       //str = str.replace(/\\n/g, '');
       console.log(out);
+      if(this.data.javascript)
+        grunt.file.write(out, 'export var ' + this.data.name + ' = ');
       grunt.file.write(out, str);
   });
 }
