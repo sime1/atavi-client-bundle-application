@@ -53,7 +53,7 @@ module.exports = function(grunt){
       //str = str.replace(/\\n/g, '');
       console.log(out);
       if(this.data.javascript)
-        grunt.file.write(out, 'export var ' + this.data.name + ' = ');
+        str = 'export var ' + this.data.name + ' = ' + str;
       grunt.file.write(out, str);
   });
 }
