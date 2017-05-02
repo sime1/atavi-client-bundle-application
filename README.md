@@ -22,5 +22,6 @@ grunt.loadNpmTasks('bundle_application_package');
 ### Overview
 WIP
 ## Release History
+0.0.3: Added support for application name
 0.0.1: Initial release
 _(Nothing yet)_

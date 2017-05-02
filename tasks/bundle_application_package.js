@@ -18,7 +18,7 @@ module.exports = function(grunt){
       let cur = grunt.file.readJSON(src);
       let dir = path.dirname(src) + '/';  //path della cartella
       console.log("dir", dir);
-      let pkg = 
+      let pkg =
       {
         setup:'',
         libs:[],
@@ -45,7 +45,9 @@ module.exports = function(grunt){
       //UI
       if(cur.ui)
         pkg.ui = grunt.file.read(dir + '/' + cur.ui);
-        
+      //name
+      if(cur.name)
+        pkg.name = cur.name;
       var str = JSON.stringify(pkg, null, 2);
       //str = str.replace(/\\n/g, '');
       console.log(out);

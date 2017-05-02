@@ -1,7 +1,7 @@
 {
   "name": "atavi-client-bundle-application",
   "description": "plugin grunt utilizzato per creare, a partire dai file che compongono un'applicazione, l'unico file del package dell'applicazione",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "",
   "author": {
     "name": "sime1",
