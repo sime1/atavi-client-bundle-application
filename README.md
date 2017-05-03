@@ -22,6 +22,7 @@ grunt.loadNpmTasks('atavi-client-bundle-application');
 ### Overview
 WIP
 ## Release History
+0.1.0 Added support for cmdHandler field
 0.0.4: Added support for ES6 javascript output
 0.0.3: Added support for application name
 0.0.1: Initial release

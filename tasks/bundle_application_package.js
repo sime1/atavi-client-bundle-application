@@ -43,6 +43,9 @@ module.exports = function(grunt){
         cur.libs.forEach((lib) => {pkg.libs.push(lib);} );
       else if(grunt.file.exists(dir + '/libs.json'))
         pkg.libs = grunt.file.readJSON(dir + '/libs.json');
+      //cmdHandler
+      if(cur.cmdHandler)
+        pkg.ui = grunt.file.read(dir + '/' + cur.cmdHandler);
       //UI
       if(cur.ui)
         pkg.ui = grunt.file.read(dir + '/' + cur.ui);
